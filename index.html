@@ -11,16 +11,41 @@
     
     <!-- 0) Barra de urgência -->
     <header id="urgencia">
-        <div>
-        <p>⏰ Últimos dias: acesso 100% grátis ao Academy Cards até <strong>31/12</strong>.</p>
+        <div class="marquee">
+            <div class="marquee__track" aria-label="Acesso 100% grátis ao Academy Cards até 31/12. Sem cartão. Preencha o formulário.">
+                <span class="marquee__item">
+                    ⏰ Últimos dias — Acesso 100% grátis ao Academy Cards até <strong>31/12</strong>
+                </span>
+                <!-- Duplicado para loop contínuo -->
+                <span class="marquee__item" aria-hidden="true">
+                    ⏰ Últimos dias — Acesso 100% grátis ao Academy Cards até <strong>31/12</strong>
+                </span>
+            </div>
         </div>
     </header>
 
     <!-- 1) Hero -->
     <section id="hero">
-        <div>
-            <h1>Acesso grátis ao Academy Cards até 31/12</h1>
-            <p><strong>Maximize sua chance de aprovação com revisões no momento certo.</strong></p>
+        <div class="hero-wrap">
+            <div class="hero-texto">
+                <h1>Acesso grátis ao Academy Cards até 31/12</h1>
+                <p class="hero-sub">Maximize sua chance de aprovação com revisões no momento certo.</p>
+            </div>
+
+            <!-- Imagem no Hero (opcional, ver item 2) -->
+            <figure class="hero-imagem">
+                <!-- troque o src pela imagem real: de preferência a tela de Revisões -->
+                <img src="tela-revisao-hero.png" alt="Tela de revisão do Academy Cards mostrando uma carta para revisar" />
+                <figcaption>Exemplo de revisão no app.</figcaption>
+            </figure>
+
+            <p class="hero-cta"><a href="#formulario">Quero meu acesso grátis</a></p>
+        </div>
+    </section>
+
+    <section id="beneficios">
+        <div class="beneficios-wrap">
+            <h2>Por que usar o Academy Cards</h2>
             <ul>
                 <li>12.000+ flashcards curados por assunto</li>
                 <li>Algoritmo de revisão inteligente que agenda suas revisões</li>
@@ -28,66 +53,32 @@
                 <li>App iOS e Android, leve e sem distrações</li>
                 <li>Liberação por e-mail em até 24 horas</li>
             </ul>
-
-            <!-- Imagem no Hero (opcional, ver item 2) -->
-            <figure>
-                <!-- troque o src pela imagem real: de preferência a tela de Revisões -->
-                <img src="tela-revisao-hero.png" alt="Tela de revisão do Academy Cards mostrando uma carta para revisar" />
-                <figcaption>Exemplo de revisão no app.</figcaption>
-            </figure>
-
             <p><a href="#formulario">Quero meu acesso grátis</a></p>
         </div>
     </section>
 
-    <section id="cards-exemplos">
-        <div>
-            <h2>Veja como é um card</h2>
-            <p>Clique em uma pergunta para revelar a resposta.</p>
+    <section id="card-flip">
+        <div class="flip-wrap">
+            <h2>Veja um exemplo</h2>
+            <p class="flip-intro">Toque na carta para ver a resposta — igual no app.</p>
 
-            <div>
-                <details>
-                    <summary>O que é energia potencial elástica?</summary>
-                    <p>É a energia armazenada em um corpo deformado elasticamente, como uma mola, dada por E = (k·x²)/2.</p>
-                </details>
+            <label class="flip">
+                <input type="checkbox" aria-label="Virar a carta para ver a resposta" />
+                <div class="flip-card">
+                    <div class="flip-face flip-front">
+                        <p class="flip-label">Pergunta</p>
+                        <p class="flip-q">O que diz a 1ª Lei de Newton?</p>
+                        <p class="flip-hint">Toque para virar</p>
+                    </div>
+                    <div class="flip-face flip-back">
+                        <p class="flip-label">Resposta</p>
+                        <p class="flip-a">Inércia: um corpo mantém repouso ou MRU se a força resultante for nula.</p>
+                        <p class="flip-hint">Toque para voltar</p>
+                    </div>
+                </div>
+            </label>
 
-                <details>
-                    <summary>Qual a diferença entre substância simples e composta?</summary>
-                    <p>Simples: um único elemento químico. Composta: dois ou mais elementos em proporção fixa (ex.: H₂O).</p>
-                </details>
-
-                <details>
-                    <summary>O que caracteriza um fenômeno físico?</summary>
-                    <p>Transformação sem alteração da composição química (muda estado/forma, não a substância).</p>
-                </details>
-
-                <details>
-                    <summary>Qual é a função de um gerador elétrico?</summary>
-                    <p>Transformar energia não elétrica (mecânica/química) em energia elétrica para o circuito.</p>
-                </details>
-
-                <details>
-                    <summary>O que é repetição espaçada?</summary>
-                    <p>Estratégia de revisão que agenda revisões em intervalos ideais para maximizar retenção.</p>
-                </details>
-
-                <details>
-                    <summary>Como calcular a altura máxima no lançamento oblíquo?</summary>
-                    <p>hₘₐₓ = (v₀²·sen²θ)/(2g).</p>
-                </details>
-
-                <details>
-                    <summary>O que são direitos sociais do art. 6º (CF)?</summary>
-                    <p>Ex.: educação, saúde, trabalho, moradia, alimentação, segurança, previdência, proteção à maternidade e infância, assistência aos desamparados.</p>
-                </details>
-
-                <details>
-                    <summary>O que é desertificação?</summary>
-                    <p>Degradação do solo em áreas áridas, semiáridas e subúmidas secas por variações climáticas e ações humanas.</p>
-                </details>
-            </div>
-
-            <p><a href="#formulario">Quero meu acesso grátis</a></p>
+            <p class="flip-cta"><a href="#formulario">Quero meu acesso grátis</a></p>
         </div>
     </section>
 
@@ -127,6 +118,34 @@
                 </blockquote>
             </article>
 
+            <article>
+                <figure>
+                    <img src="prof-mari-iquimica.jpg" alt="Foto da professora Mari (iQuímica)" />
+                    <figcaption>
+                        <strong>Profa. Mari</strong><br />
+                        Química — iQuímica
+                    </figcaption>
+                </figure>
+                <blockquote>
+                    <p>“Os alunos param de acumular matéria. As revisões curtas e frequentes fazem a diferença,
+                    e as métricas mostram evolução real.”</p>
+                </blockquote>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="prof-mari-iquimica.jpg" alt="Foto da professora Mari (iQuímica)" />
+                    <figcaption>
+                        <strong>Profa. Mari</strong><br />
+                        Química — iQuímica
+                    </figcaption>
+                </figure>
+                <blockquote>
+                    <p>“Os alunos param de acumular matéria. As revisões curtas e frequentes fazem a diferença,
+                    e as métricas mostram evolução real.”</p>
+                </blockquote>
+            </article>
+            
             <article>
                 <figure>
                     <img src="prof-mari-iquimica.jpg" alt="Foto da professora Mari (iQuímica)" />
@@ -196,7 +215,6 @@
             <h2>Acesso 100% grátis até 31/12</h2>
             <p>Entre agora, use tudo sem custo até 31/12. Depois, você decide se continua.</p>
             <p><del>R$ XX/mês</del> <strong>R$ 0</strong> até 31/12.</p>
-            <p><a href="#formulario">Garantir meu acesso grátis</a></p>
         </div>
     </section>
 
@@ -239,8 +257,6 @@
                 <summary>Já sou usuário, ganho algo?</summary>
                 <p>Se já tem conta ativa, manteremos seus dados; o período grátis se aplica a novos acessos (ajuste conforme sua regra interna).</p>
             </details>
-
-            <p><a href="#formulario">Quero meu acesso grátis</a></p>
         </div>
     </section>
 
@@ -317,7 +333,6 @@
                 <a href="#contato">Contato</a>
             </nav>
             <p>© Academy Cards • CNPJ 00.000.000/0000-00 (exemplo) • Suporte: <a href="mailto:suporte@academy.cards">suporte@academy.cards</a></p>
-            <p><a href="#formulario">Garantir meu acesso grátis</a></p>
         </div>
     </footer>
 
