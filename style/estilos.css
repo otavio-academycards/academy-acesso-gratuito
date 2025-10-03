@@ -34,7 +34,7 @@ h1,h2,h3,h4,.btn-primary{ font-family: var(--font-heading); letter-spacing:.1px;
 #urgencia .marquee__track{
     white-space: nowrap;
     display: inline-block;
-    animation: urg-marquee 15s linear infinite;
+    animation: urg-marquee 30s linear infinite;
 }
 
 #urgencia .marquee__item{
@@ -232,25 +232,28 @@ h1,h2,h3,h4,.btn-primary{ font-family: var(--font-heading); letter-spacing:.1px;
 
 #card-flip{
   padding: 12px 16px 12px;
-  background: #FFFFFF;
-  color: #06202B;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #FFA857;
+  padding: 30px 15px;
 }
 
 #card-flip .flip-wrap{
-  max-width: 900px;
+  max-width: 1400px;
   margin: 0 auto;
   text-align: center;
+  padding: 20px 40px 20px;
 }
 
 #card-flip h2{
   margin: 0 0 8px 0;
   font-size: clamp(20px, 2.6vw, 28px);
+  line-height: 1.2;
+  letter-spacing: .2px;
+  color: #001A27;
 }
 
 #card-flip .flip-intro{
   margin: 0 0 16px 0;
-  color: #355564;
+  color: #001A27;
 }
 
 /* Flip container */
@@ -258,6 +261,7 @@ h1,h2,h3,h4,.btn-primary{ font-family: var(--font-heading); letter-spacing:.1px;
   display: inline-block;
   perspective: 1200px; /* profundidade do 3D */
   cursor: pointer;
+  margin: 20px 0 40px;
 }
 
 #card-flip .flip input{
@@ -269,8 +273,8 @@ h1,h2,h3,h4,.btn-primary{ font-family: var(--font-heading); letter-spacing:.1px;
 /* Cartão 3D */
 #card-flip .flip-card{
   position: relative;
-  width: min(420px, 90vw);
-  aspect-ratio: 27/20;          /* proporção sugerida */
+  height: min(420px, 90vw);
+  aspect-ratio: 20/27;          /* proporção sugerida */
   transform-style: preserve-3d;
   transition: transform .6s cubic-bezier(.2,.7,.2,1);
   border-radius: 16px;
@@ -292,10 +296,13 @@ h1,h2,h3,h4,.btn-primary{ font-family: var(--font-heading); letter-spacing:.1px;
 }
 #card-flip .flip-front{
   background: #F7FCFF;
+  align-content: space-between;
 }
+
 #card-flip .flip-back{
   background: #E7F7FF;
   transform: rotateY(180deg);
+  align-content: space-between;
 }
 
 /* Texto nas faces */
@@ -330,20 +337,32 @@ h1,h2,h3,h4,.btn-primary{ font-family: var(--font-heading); letter-spacing:.1px;
 }
 
 /* CTA da seção */
-#card-flip .flip-cta{
-  margin-top: 16px;
-}
 #card-flip .flip-cta a{
-  display: inline-block;
+  display: block;
+  margin: auto;
+  width: fit-content;
+  color:#001A27;
+  font-weight:700;
+  font-size: clamp(14px, 12px + 0.4vw, 18px);
+  letter-spacing:.5px;
+  padding: 12px 29px;
+  border:0;
+  border-radius:999px;
+  background:#3FBFFF;
+  text-transform:uppercase;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.26);
+  cursor:pointer;
+  transition: transform .06s ease, filter .2s ease;
   text-decoration: none;
-  background: var(--brand-primary, #3FBFFF);
-  color: #07232F;
-  padding: 10px 16px;
-  border-radius: 12px;
-  font-weight: 800;
-  box-shadow: 0 2px 0 rgba(7,35,47,.35), 0 10px 24px rgba(63,191,255,.18);
-  border: 1px solid rgba(7,35,47,.08);
 }
+
+#card-flip .flip-cta a:hover{
+  transform: brightness(3);
+  background-color: #3FBFFF;
+  transform: scale(1.05);
+  color: #001A27;
+}
+#card-flip .flip-cta a:active{ transform: translateY(0); }
 
 #prova-social{
   --ps-gap: 20px;          /* espaço ENTRE cards */
