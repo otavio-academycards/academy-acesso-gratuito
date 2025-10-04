@@ -644,7 +644,7 @@ h1,h2,h3,h4,.btn-primary{ font-family: var(--font-heading); letter-spacing:.1px;
 --trail-left: 55px; /* desloca a SVG na horizontal */
 --trail-x: 0px; /* translate interno da curva (eixo X) */
 --trail-y: -20px; /* translate interno da curva (eixo Y) */
---trail-scale-x: 1.4; /* estica/encolhe a curva em X */
+--trail-scale-x: 1; /* estica/encolhe a curva em X */
 --trail-scale-y: 1.25; /* estica/encolhe a curva em Y */
 
 --trail-rotate: 7deg; /* mobile */
