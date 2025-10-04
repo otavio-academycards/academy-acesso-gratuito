@@ -367,168 +367,345 @@ h1,h2,h3,h4,.btn-primary{ font-family: var(--font-heading); letter-spacing:.1px;
 #prova-social{
   --ps-gap: 20px;          /* espaço ENTRE cards */
   --ps-gutter: 16px;       /* respiro nas LATERAIS da faixa */
-  padding: 36px 13px;
-  background: #FFFFFF;
+  padding: 30px 15px;
+  background: #3FBFFF;
   color: #06202B;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+#prova-social .ps-wrap{
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 40px 20px;  
+  position: relative;
 }
 
 #prova-social h2{
-  margin: 0 0 6px 0;
-  font-size: clamp(20px, 2.6vw, 28px);
-}
-
-#prova-social h2 + p{            /* lead curtinha abaixo do título */
-  margin: 0 0 16px 0;
-  color: #355564;
-}
-
-#prova-social > div{
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-#prova-social > div > div{  /* container dos depoimentos */
-  display: flex;
-  gap: var(--ps-gap);
-  overflow-x: auto;         /* rolagem horizontal */
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior-x: contain;
-  scroll-snap-type: x mandatory;          /* encaixe por card */
-  scroll-padding-inline: var(--ps-gutter);
-  padding: 8px var(--ps-gutter) 12px;     /* gutters laterais + respiro vertical */
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-#prova-social > div > div::-webkit-scrollbar{ display: none; }
-
-#prova-social article{
-  box-sizing: border-box;/* (1) inclui padding/borda na largura */
-  /* 1 por “tela” no mobile: ocupa quase a largura total, com gutters */
-  flex: 0 0 clamp(
-    300px,
-    calc(100% - (2 * var(--ps-gutter)) - var(--ps-gap)), /* (2) desconta gap e gutters */
-    100%
-  );
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-
-  background: #F7FCFF;
-  border: 1px solid rgba(7,35,47,.08);
-  border-radius: 16px;
-  box-shadow: 0 8px 22px rgba(0,0,0,.08);
-  padding: 14px;
-
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  align-items: center;
-  min-height: 140px;
-
-  position: relative;                     /* evita sobrepor a barra do topo */
-  z-index: 0;
-}
-
-/* Foto + identificação */
-#prova-social article figure{ margin: 0; text-align: center; }
-#prova-social article img{
-  width: 96px; height: 96px;
-  border-radius: 999px; object-fit: cover;
-  border: 3px solid var(--brand-primary, #3FBFFF);
-  box-shadow: 0 4px 14px rgba(63,191,255,.18);
-  display: block; margin-inline: auto;
-}
-#prova-social article figcaption{
-  margin-top: 6px; font-size: .9rem; line-height: 1.2; color: #0B3140;
-}
-
-/* Depoimento */
-#prova-social article blockquote{
-  margin: 0; grid-column: 2; color: #173845; line-height: 1.45;
-}
-#prova-social article blockquote p{ margin: 0; }
-
-#por-que-funciona{
-  padding: 36px 16px;
-  background: linear-gradient(180deg, #FFFFFF 0%, #F7FCFF 70%);
-  color: #06202B;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-}
-
-#por-que-funciona > div{
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* Título e parágrafo de base científica */
-#por-que-funciona h2{
   margin: 0 0 8px 0;
   font-size: clamp(20px, 2.6vw, 28px);
   line-height: 1.2;
+  letter-spacing: .2px;
+  color: #001A27;
 }
 
-#por-que-funciona > div > p:first-of-type{
-  margin: 0 0 14px 0;
-  color: #173845;
-  line-height: 1.55;
-  max-width: 65ch;                 /* linha confortável para leitura */
+#prova-social > .ps-wrap > p{
+  margin: 0 0 18px 0;
+  opacity: .95;
+  color: #001A27;
 }
 
-#por-que-funciona strong{ color: #0B3140; }
-
-/* Lista de benefícios (checks) */
-#por-que-funciona ul{
-  list-style: none;
-  margin: 0 0 16px 0;
-  padding: 0;
-  display: grid;
-  gap: 10px;                        /* espaço entre itens */
-  grid-template-columns: 1fr;       /* mobile: 1 coluna */
-}
-
-#por-que-funciona li{
+/* Visor (recorta) + trilho (anima) */
+#prova-social .ps-viewport{
+  max-width: 700px;
+  margin: 0 auto;
+  overflow: hidden;
   position: relative;
-  padding-left: 36px;               /* espaço para o ícone */
+  margin-bottom: 45px;
+}
+
+#prova-social .ps-track{
+  display: flex;
+  will-change: transform;
+  transition: transform .8s ease-in-out;
+}
+
+#prova-social .ps-slide{
+  flex: 0 0 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  color: #003D5C;
+}
+
+/* Avatar + legenda */
+#prova-social .ps-slide figure{ margin: 0 0 12px 0; }
+
+#prova-social .ps-slide img{
+  background: #fff;
+  width: 130px;
+  height: 130px;
+  border-radius: 999px;
+  object-fit: cover;
+  box-shadow: 0 8px 22px rgba(0,0,0,.12);
+  border: 4px solid #0074AD;
+  margin-bottom: 15px;
+}
+
+#prova-social .ps-slide figcaption{
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+#prova-social .ps-slide figcaption strong{ 
+  font-weight: 800; 
+  color: #001A27;
+}
+
+/* Quote */
+
+#prova-social blockquote p{
+  margin: 6px auto 0;
+  max-width: 62ch;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #fff;
+}
+
+/* Setas */
+#prova-social .ps-arrow{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  color: #003D5C;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px 10px;
+  font-weight: 800;
+  user-select: none;
+  transition: color .2s ease;
+  line-height: 1;
+  z-index: 5;
+}
+
+#prova-social .ps-prev{ left: 16px; }
+#prova-social .ps-next{ right: 16px; }
+#prova-social .ps-arrow:focus-visible{
+  outline: 3px solid #FFE86D; outline-offset: 2px;
+}
+
+/* CTA da seção */
+#prova-social .ps-cta a{
+  display: block;
+  margin: auto;
+  width: fit-content;
+  color:#001A27;
+  font-weight:700;
+  font-size: clamp(14px, 12px + 0.4vw, 18px);
+  letter-spacing:.5px;
+  padding: 12px 29px;
+  border:0;
+  border-radius:999px;
+  background:#FFE86D;
+  text-transform:uppercase;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.26);
+  cursor:pointer;
+  transition: transform .06s ease, filter .2s ease;
+  text-decoration: none;
+}
+
+#prova-social .ps-cta a:hover{
+  transform: brightness(3);
+  background-color: #FFE86D;
+  transform: scale(1.05);
+  color: #001A27;
+}
+#prova-social .ps-cta a:active{ transform: translateY(0); }
+
+#como-funciona{
+  padding: 30px 15px;
+  background: #FFE86D;  /* leve realce de fundo */
+}
+
+#como-funciona .cf-wrap{
+  max-width:1400px;
+  margin:0 auto;
+  position:relative;
+  padding: 20px 40px 20px;  
+}
+
+/* ====== Cabeçalho ====== */
+#como-funciona h2{
+  font-size:clamp(24px,3vw,36px);
+  line-height:1.1;
+  color:#001A27;
+  margin:0 0 6px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#como-funciona .cf-sub{
+  color:#001A27;
+  font-size:15px;
+  margin:0;
+}
+
+/* ====== Trilha MOBILE (grossa) ====== */
+
+/* ====== Passos (markup único) ====== */
+#como-funciona .cf-steps{
+  margin:30px auto 0;
+  display:grid;
+  gap:40px;                    /* espaço entre passos */
+  grid-template-columns:1fr;   /* mobile: 1 coluna */
+  position:relative;
+  z-index:2;
+  list-style: none;
+}
+
+#como-funciona .cf-step{
+  background-color: #fff;
+  border: 1px solid #E6F2FA;
+  border-radius: 18px;
+  padding: 20px;
+}
+
+#como-funciona .cf-left {
+  transform: translateX(4vw);
+}
+
+#como-funciona .cf-right {
+  justify-self: end;
+  transform: translateX(-4vw);
+}
+
+#como-funciona .cf-step.cf-left::before,
+#como-funciona .cf-step.cf-right::before{
+  content: "";
+  position: absolute;
+  top: 24px;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  z-index: 3;
+  background: #fff;
+  box-shadow: 0 0 0 6px rgba(63,191,255,.15), inset 0 0 0 4px #3FBFFF;
+}
+
+#como-funciona .cf-step.cf-left::before{ left: -22px; }
+#como-funciona .cf-step.cf-right::before{ right: -22px; }
+
+#como-funciona .cf-kicker{
+  display: inline-grid;
+  grid-auto-flow: column;
+  gap: 8px;
+  align-items: center;
+  font-weight: 800;
+  font-size: 18px;
+  color: #073b57;
+  letter-spacing: .3px;
+  background: #E7F7FF;  
+  border: 1px dashed #3FBFFF;
+  border-radius: 999px;
+  padding: 6px 10px;
+  margin-bottom: 6px;
+}
+
+#como-funciona .cf-dot{
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #3FBFFF, #FFE86D);
+  box-shadow: 0 0 0 2px rgba(63,191,255,.25);
+}
+
+#como-funciona .cf-icon{
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 12px;
+  background: #fff;
+  border: 1px solid #dff3ff; 
+  box-shadow: inset 0 0 0 2px rgba(63,191,255,.15);
+}
+
+#como-funciona .icon{
+  width: 24px;
+  height: 24px;
+}
+
+#como-funciona .cf-title{
+  margin: 0 0 8px 0;
+  font-size: clamp(18px, 2.1vw, 22px);
+  line-height: 1.2;
+  color: #001A27;
+}
+
+#como-funciona .cf-text{
+  margin: 0;
+  font-size: 15px;
   line-height: 1.45;
   color: #0B3140;
 }
 
-/* Ícone de check (brand) */
-#por-que-funciona li::before{
-  content: "✓";
-  position: absolute;
-  left: 0; top: 2px;
-  inline-size: 22px; block-size: 22px;
-  border-radius: 999px;
-  display: grid; place-items: center;
-  font-weight: 900;
-  font-size: 14px;
-  color: #07232F;
-  background: var(--brand-primary, #3FBFFF);
-  border: 2px solid rgba(7,35,47,.08);
-  box-shadow: 0 4px 12px rgba(63,191,255,.20);
+#como-funciona{ overflow:hidden; }
+#como-funciona .cf-wrap{ position:relative; overflow:hidden; }
+#como-funciona .cf-steps{ position:relative; z-index:2; }
+
+
+/* === TRILHA — PATCH (adicione ao final do seu CSS) === */
+#como-funciona{
+/* variáveis de ajuste fino (mude aqui para alinhar início/fim) */
+--trail-top: 135px; /* move a caixa da SVG para cima/baixo */
+--trail-bottom: -60px; /* aumenta a área até o rodapé da seção */
+--trail-left: 60px; /* desloca a SVG na horizontal */
+--trail-x: 0px; /* translate interno da curva (eixo X) */
+--trail-y: -20px; /* translate interno da curva (eixo Y) */
+--trail-scale-x: 1.4; /* estica/encolhe a curva em X */
+--trail-scale-y: 1.08; /* estica/encolhe a curva em Y */
+
+--trail-rotate: 7deg; /* mobile */
+--trail-desktop-rotate: 0deg; /* desktop */
+
+/* desktop (S-curve) */
+--trail-desktop-x: 0px;
+--trail-desktop-y: 0px;
+--trail-desktop-scale: 1;
+
+
+/* se ainda não tiver */
+overflow: hidden; /* impede a trilha de vazar para fora da seção */
+}
+#como-funciona .cf-wrap{ position: relative; overflow: hidden; }
+#como-funciona .cf-steps{ position: relative; z-index: 2; }
+
+
+/* ——— Trilha MOBILE (SVG) ——— */
+#como-funciona .cf-trail-mobile{
+position:absolute;
+left: var(--trail-left); right: 0;
+top: var(--trail-top); bottom: var(--trail-bottom);
+z-index:1; pointer-events:none; display:block; overflow: visible;
+transform: translate(var(--trail-x, 0px), var(--trail-y, 0px))
+scale(var(--trail-scale-x, 1), var(--trail-scale-y, 1))
+rotate(var(--trail-rotate));
+transform-origin: 50% 0%; /* pivota pelo topo central; mude p/ left top se preferir */
+will-change: transform;
+}
+#como-funciona .cf-trail-base{
+fill:none; stroke: rgba(255,232,109,.35); stroke-width: 44;
+stroke-linecap:round; stroke-linejoin:round;
+}
+#como-funciona .cf-trail-core{
+fill:none; stroke:#3FBFFF; stroke-width:22;
+stroke-linecap:round; stroke-linejoin:round;
+filter: drop-shadow(0 4px 16px rgba(63,191,255,.25));
+}
+#como-funciona #cf-arrow-fat path{ fill:#3FBFFF; }
+
+
+/* ——— Trilha DESKTOP (S-curve ao fundo) ——— */
+#como-funciona .cf-trail-desktop{
+position:absolute; inset:0; z-index:1; pointer-events:none; display:none;
+transform: translate(var(--trail-desktop-x, 0px), var(--trail-desktop-y, 0px))
+scale(var(--trail-desktop-scale, 1))
+rotate(var(--trail-desktop-rotate));
+transform-origin: 50% 50%;
+will-change: transform;
 }
 
-/* CTA da seção */
-#por-que-funciona > div > p:last-of-type{
-  margin: 6px 0 0 0;
-}
-#por-que-funciona > div > p:last-of-type a{
-  display: inline-block;
-  text-decoration: none;
-  background: var(--brand-primary, #3FBFFF);
-  color: #07232F;
-  padding: 10px 16px;
-  border-radius: 12px;
-  font-weight: 800;
-  box-shadow: 0 2px 0 rgba(7,35,47,.35), 0 10px 24px rgba(63,191,255,.18);
-  border: 1px solid rgba(7,35,47,.08);
-}
-#por-que-funciona > div > p:last-of-type a:focus-visible{
-  outline: 3px solid var(--accent-1, #FFE86D);
-  outline-offset: 2px;
+#como-funciona .cf-s-outer{ fill:none; stroke:rgba(255,232,109,.35); stroke-width:14; stroke-linecap:round; }
+#como-funciona .cf-s-inner{ fill:none; stroke:#3FBFFF; stroke-width:8; stroke-linecap:round; }
+#como-funciona #cf-arrow-head path{ fill:#3FBFFF; }
+
+
+/* ——— Breakpoint: mostra a S-curve no desktop ——— */
+@media (min-width:901px){
+#como-funciona .cf-trail-mobile{ display:none; }
+#como-funciona .cf-trail-desktop{ display:block; }
 }
 
 #recursos{
