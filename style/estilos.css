@@ -639,13 +639,13 @@ h1,h2,h3,h4,.btn-primary{ font-family: var(--font-heading); letter-spacing:.1px;
 /* === TRILHA — PATCH (adicione ao final do seu CSS) === */
 #como-funciona{
 /* variáveis de ajuste fino (mude aqui para alinhar início/fim) */
---trail-top: 135px; /* move a caixa da SVG para cima/baixo */
+--trail-top: 150px; /* move a caixa da SVG para cima/baixo */
 --trail-bottom: -60px; /* aumenta a área até o rodapé da seção */
---trail-left: 60px; /* desloca a SVG na horizontal */
+--trail-left: 55px; /* desloca a SVG na horizontal */
 --trail-x: 0px; /* translate interno da curva (eixo X) */
 --trail-y: -20px; /* translate interno da curva (eixo Y) */
 --trail-scale-x: 1.4; /* estica/encolhe a curva em X */
---trail-scale-y: 1.08; /* estica/encolhe a curva em Y */
+--trail-scale-y: 1.25; /* estica/encolhe a curva em Y */
 
 --trail-rotate: 7deg; /* mobile */
 --trail-desktop-rotate: 0deg; /* desktop */
