@@ -708,6 +708,75 @@ will-change: transform;
 #como-funciona .cf-trail-desktop{ display:block; }
 }
 
+#metodologia{
+  padding: 30px 15px;
+  background: #FFE86D;  /* leve realce de fundo */
+  position: relative;
+  overflow: hidden;
+}
+
+#metodologia .met-wrap{
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 40px 20px;  
+}
+
+#metodologia .met-header{
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+#metodologia h2{
+  margin: 0 0 8px 0;
+  font-size: clamp(26px, 3.2vw, 40px);
+  line-height: 1.2;
+  letter-spacing: .2px;
+  color: #001A27;
+}
+
+#metodologia .met-sub{
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.45;
+  color: #0B3140;
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#metodologia .met-emoji{
+  font-size: .9em;
+  margin-right: 6px;
+}
+
+#metodologia .scribble{
+  position: relative;
+  display: inline-block;
+}
+
+#metodologia .scribble::after{
+  content: "";
+  position: absolute;
+  left:-3px; right:-30px; bottom:-10px; height:13px;
+  background:
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="220" height="14" viewBox="0 0 220 14"><path d="M2 10 Q 40 2 80 10 T 160 10 T 218 10" fill="none" stroke="%23FFA858" stroke-width="4" stroke-linecap="round"/></svg>')
+    no-repeat center/100% 100%;
+  opacity:.9;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 #recursos{
   padding: 36px 16px;
   background: #FFFFFF;
