@@ -765,6 +765,117 @@ will-change: transform;
   opacity:.9;
 }
 
+#metodologia .met-wrap .pqf__wrap {
+  position: relative;
+}
+
+/* Título e lead */
+.pqf__wrap > h2{
+  margin: 0 0 8px 0;
+  font-size: clamp(22px, 3.2vw, 34px);
+  line-height: 1.12;
+}
+
+.pqf__lead{
+  margin: 0 0 16px 0;
+  color: #173845;
+  line-height: 1.55;
+  max-width: 70ch;
+}
+
+/* GRID dos pilares (mobile-first) */
+.pqf__grid{
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;            /* 1 por linha no mobile */
+}
+
+/* Cartinhas (cards) */
+.pqf__card{
+  position: relative;
+  background: #F7FCFF;
+  border: 2px solid rgba(7,35,47,.10);
+  border-radius: 16px;
+  padding: 25px 16px 16px 72px;          /* espaço p/ “sticker” à esquerda */
+  box-shadow:
+    0 12px 28px rgba(0,0,0,.12),
+    0 0 0 6px rgba(255,255,255,.62) inset; /* textura de papel */
+  transform: rotate(var(--tilt, 0deg));
+  transition: transform .15s ease, box-shadow .2s ease;
+}
+
+.pqf__card:hover{
+  transform: rotate(calc(var(--tilt, 0deg) * .6)) translateY(-2px);
+  box-shadow: 0 16px 34px rgba(0,0,0,.14), 0 0 0 6px rgba(255,255,255,.70) inset;
+}
+/* inclinação leve alternada */
+.pqf__card:nth-child(1){ --tilt: -1.2deg; }
+.pqf__card:nth-child(2){ --tilt:  .9deg; }
+.pqf__card:nth-child(3){ --tilt: -0.6deg; }
+.pqf__card:nth-child(4){ --tilt:  1.1deg; }
+
+/* “Sticker”/ícone decorativo (lúdico) */
+.pqf__card::before{
+  content: "✓";                             /* fallback */
+  position: absolute;
+  left: 16px; top: 16px;
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  display: grid; place-items: center;
+  background: linear-gradient(180deg, #ffc272, #FFE7C7);
+  border: 2px solid var(--brand);
+  box-shadow: 0 6px 16px rgba(63,191,255,.22);
+  font-weight: 900; color: #07232F;
+  font-size: 18px;
+}
+
+/* Emojis por pilar (pode trocar por imagens via background-image) */
+.pqf__card:nth-child(1)::before{content: "⏱️"; }
+.pqf__card:nth-child(2)::before{ content: "🧠"; }
+.pqf__card:nth-child(3)::before{ content: "🔀"; }
+.pqf__card:nth-child(4)::before{ content: "📈"; }
+
+/* Títulos e textos internos */
+.pqf__card h3{
+  margin: 2px 0 6px 0;
+  font-size: clamp(16px, 2.1vw, 20px);
+  line-height: 1.25;
+  color: #0B3140;
+  font-weight: 900;
+}
+.pqf__why{
+  margin: 0 0 10px 0;
+  color: #173845;
+  line-height: 1.5;
+}
+.pqf__so-what{
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 6px;
+  color: #06202B;
+}
+.pqf__so-what li{ line-height: 1.45; }
+
+/* Notas/Referências */
+.pqf__refs{
+  margin: 12px 0 0 0;
+  padding-left: 1.2rem;
+  font-size: .7rem;
+  color: #355564;
+  line-height: 1.45;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
