@@ -1,5 +1,18 @@
 @charset "UTF-8";
 
+/*
+    Paleta de cores:
+    Azul fundo: #001A27
+    Azul escuro: #00273B
+    Azul oficial: #0074AD
+    Azul claro: #3FBFFF
+    Amarelo primário: #FFE86D
+    Laranja claro: #FFE7C7
+    Laranja escuro: #FFA857
+    Cinza claro: #E7F7FF
+*/
+
+
 *{
   margin: 0px;
   padding: 0px;
@@ -14,7 +27,7 @@ html{ scroll-behavior: smooth; } /* se quiser scroll suave nativo */
 }
 
 html{ font-family: var(--font-body); }
-h1,h2,h3,h4,.btn-primary{ font-family: var(--font-heading); letter-spacing:.1px; }
+h1,h2,h3,h4{ font-family: var(--font-heading); letter-spacing:.1px; }
 
 #urgencia{
     position: sticky;
@@ -91,6 +104,12 @@ h1,h2,h3,h4,.btn-primary{ font-family: var(--font-heading); letter-spacing:.1px;
   color: #001A27;
   max-width: 65ch;
   font-weight: 600;
+}
+
+#hero .destaque{
+  font-weight: 800;
+  color: #0074AD;
+  text-shadow: #000c272a 2px 2px 2px;
 }
 
 #hero .hero-imagem img{
