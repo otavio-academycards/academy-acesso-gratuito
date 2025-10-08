@@ -59,6 +59,7 @@
         </div>
     </section>
 
+    <!-- 2) Proposta de Valor -->
     <section id="proposta-valor">
         <div class="provas-wrap">
             <h2>O que realmente faz diferença</h2>
@@ -69,15 +70,15 @@
                         <img src="imagens/carta1.png" alt="valor 1">
                         <h3>Revisões no momento certo</h3>
                     </div>
-                    <p>Nosso algoritmo agenda suas revisões para você parar de esquecer e avançar com consistência.</p>
+                    <p>Nosso algoritmo agenda suas revisões para você fixar o conteúdo e parar de esquecer.</p>
                 </div>
                 
                 <div class="valores-wrap">
                     <div class="valores-item">
                         <img src="imagens/carta2.png" alt="valor 1">
-                        <h3>Conteúdo curado e pronto</h3>
+                        <h3>Conteúdo pronto e organizado</h3>
                     </div>
-                    <p>12.000+ flashcards organizados por disciplina e tópico — comece a revisar sem perder tempo montando.</p>
+                    <p>São mais de 15.000 flashcards organizados por disciplina e tópico para você não perder tempo.</p>
                 </div>
 
                 <div class="valores-wrap">
@@ -101,126 +102,65 @@
         </div>
     </section>
 
-    <section id="card-flip">
-        <div class="flip-wrap">
-            <h2>Veja um exemplo</h2>
-            <p class="flip-intro">Toque na carta para ver a resposta — igual no app.</p>
+    <!-- 3) Metodologia (base científica) -->
+    <section id="metodologia" aria-labelledby="metodologia-title">
+        <div class="met-wrap">
+            <header class="met-header">
+            <h2 id="metodologia-title">
+                <span class="met-emoji" aria-hidden="true">🧠</span>
+                Metodologia <span class="scribble">por que funciona</span>
+            </h2>
+            <p class="met-sub">
+                Combinamos três práticas validadas pela ciência do aprendizado — repetição espaçada, prática de recuperação e intercalação — e fechamos com métricas objetivas.
+            </p>
+            </header>
 
-            <label class="flip">
-                <input type="checkbox" aria-label="Virar a carta para ver a resposta" />
-                <div class="flip-card">
-                    <div class="flip-face flip-front">
-                        <p class="flip-label">Pergunta</p>
-                        <p class="flip-q">O que diz a 1ª Lei de Newton?</p>
-                        <p class="flip-hint">Toque para virar</p>
-                    </div>
-                    <div class="flip-face flip-back">
-                        <p class="flip-label">Resposta</p>
-                        <p class="flip-a">Inércia: um corpo mantém repouso ou MRU se a força resultante for nula.</p>
-                        <p class="flip-hint">Toque para voltar</p>
-                    </div>
-                </div>
-            </label>
-
-            <p class="flip-cta"><a href="#formulario">Quero meu acesso grátis</a></p>
-        </div>
-    </section>
-
-    <!-- 2) Professores aprovam -->
-<!-- 2) Professores aprovam -->
-    <section id="prova-social">
-        <div class="ps-wrap">
-            <h2>Professores aprovam</h2>
-            <p>Quem está no dia a dia da preparação para ENEM e vestibulares recomenda o Academy Cards.</p>
-
-            <!-- setas -->
-            <button class="ps-arrow ps-prev" aria-label="Anterior" type="button">‹</button>
-            <button class="ps-arrow ps-next" aria-label="Próximo"  type="button">›</button>
-
-            <!-- visor (recorta) -->
-            <div class="ps-viewport" aria-roledescription="carousel" aria-label="Depoimentos de professores">
-                <!-- trilho (move com transform) -->
-                <div class="ps-track" id="psTrack">
-                    <!-- seus artigos viram slides -->
-                    <article class="ps-slide">
-                        <figure>
-                            <img src="prof-jana-rabelo.jpg" alt="" loading="lazy" />
-                            <figcaption>
-                                <strong>Profa. Jana Rabelo</strong><br />
-                                Redação — Coach de vestibulares
-                            </figcaption>
-                        </figure>
-                        <blockquote>
-                            <p>“Participei ativamente da preparação do material didático do Academy Cards e sou um entusiasta da qualidade e inovação desse projeto. Com base na minha experiência com alunos pré-Enem, endosso seu caráter promissor e eficiente como método de fixação de conteúdos e avaliação do aprendizado.”</p>
-                        </blockquote>
+            <div class="pqf__wrap">
+                <div class="pqf__grid">
+                    <!-- 1) Repetição espaçada -->
+                    <article class="pqf__card">
+                        <h3>Repetição espaçada</h3>
+                        <p class="pqf__why">
+                        Revisões aparecem no ponto ótimo de memorização, ajustando os intervalos conforme seu desempenho.
+                        </p>
                     </article>
 
-                    <article class="ps-slide">
-                        <figure>
-                            <img src="prof-vitinho-terranegra.jpg" alt="" loading="lazy" />
-                            <figcaption>
-                                <strong>Prof. Vitin</strong><br />
-                                Humanas — Terra Negra
-                            </figcaption>
-                        </figure>
-                        <blockquote>
-                            <p>“Participei ativamente da preparação do material didático do Academy Cards e sou um entusiasta da qualidade e inovação desse projeto. Com base na minha experiência com alunos pré-Enem, endosso seu caráter promissor e eficiente como método de fixação de conteúdos e avaliação do aprendizado.”</p>
-                        </blockquote>
+                    <!-- 2) Prática de recuperação (testing effect) -->
+                    <article class="pqf__card">
+                        <h3>Teste ativo de recuperação</h3>
+                        <p class="pqf__why">
+                        Você pensa antes de ver a resposta. Lembrar ativamente consolida muito mais do que reler.
+                        </p>
                     </article>
 
-                    <article class="ps-slide">
-                        <figure>
-                            <img src="prof-vitinho-terranegra.jpg" alt="" loading="lazy" />
-                            <figcaption>
-                                <strong>Prof. Vitin</strong><br />
-                                Humanas — Terra Negra
-                            </figcaption>
-                        </figure>
-                        <blockquote>
-                            <p>“Participei ativamente da preparação do material didático do Academy Cards e sou um entusiasta da qualidade e inovação desse projeto. Com base na minha experiência com alunos pré-Enem, endosso seu caráter promissor e eficiente como método de fixação de conteúdos e avaliação do aprendizado.”</p>
-                        </blockquote>
+                    <!-- 3) Intercalação e variação -->
+                    <article class="pqf__card">
+                        <h3>Intercalação e variação</h3>
+                        <p class="pqf__why">
+                        Misturar tópicos e exemplos melhora a discriminação entre conceitos e evita “ilusão de domínio”.
+                        </p>
                     </article>
 
-                    <article class="ps-slide">
-                        <figure>
-                            <img src="prof-vitinho-terranegra.jpg" alt="" loading="lazy" />
-                            <figcaption>
-                                <strong>Prof. Vitin</strong><br />
-                                Humanas — Terra Negra
-                            </figcaption>
-                        </figure>
-                        <blockquote>
-                            <p>“Participei ativamente da preparação do material didático do Academy Cards e sou um entusiasta da qualidade e inovação desse projeto. Com base na minha experiência com alunos pré-Enem, endosso seu caráter promissor e eficiente como método de fixação de conteúdos e avaliação do aprendizado.”</p>
-                        </blockquote>
+                    <!-- 4) Métricas e metacognição -->
+                    <article class="pqf__card">
+                        <h3>Métricas que corrigem a intuição</h3>
+                        <p class="pqf__why">
+                        Alunos tendem a superestimar o que “sentem” que sabem. Indicadores objetivos (acerto, tempo, estabilidade) guiam decisões melhores de estudo.
+                        </p>
                     </article>
-
-                    <article class="ps-slide">
-                        <figure>
-                            <img src="prof-vitinho-terranegra.jpg" alt="" loading="lazy" />
-                            <figcaption>
-                                <strong>Prof. Vitin</strong><br />
-                                Humanas — Terra Negra
-                            </figcaption>
-                        </figure>
-                        <blockquote>
-                            <p>“Participei ativamente da preparação do material didático do Academy Cards e sou um entusiasta da qualidade e inovação desse projeto. Com base na minha experiência com alunos pré-Enem, endosso seu caráter promissor e eficiente como método de fixação de conteúdos e avaliação do aprendizado.”</p>
-                        </blockquote>
-                    </article>
-
                 </div>
             </div>
 
-            <p class="ps-cta"><a href="#formulario">Quero meu acesso grátis</a></p>
+            </div>
         </div>
     </section>
 
     <!-- 4) Por que funciona (base científica) -->
-    <!-- Seção: Como funciona no aplicativo (HTML puro, sem CSS) -->
-    <section id="como-funciona" aria-labelledby="como-funciona-title">
+    <section id="como-funciona" aria-labelledby="cf-title">
         <div class="cf-wrap">
             <header class="cf-header">
-                <h2 id="cf-title">Como funciona no aplicativo (3 passos)</h2>
-                <p class="cf-sub">Uma trilha visual que conecta suas ações ao resultado: estudar → revisar com inteligência → evoluir.</p>
+                <h2 id="cf-title">Como funciona no aplicativo</h2>
+                <p class="cf-sub">Uma trilha simples: dizer o que quer → revisar no momento certo → ver a evolução.</p>
             </header>
 
             <!-- Trilhas decorativas -->
@@ -255,133 +195,188 @@
             <ol class="cf-steps" role="list" aria-label="Passos do aplicativo">
                 <!-- Passo 1 -->
                 <li class="cf-step cf-left">
-                    <div class="cf-kicker"><span class="cf-dot" aria-hidden="true"></span> Passo 1</div>
-                    <div class="cf-icon" aria-hidden="true">
-                        <!-- Ícone caderno -->
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <rect x="4" y="3" width="14" height="18" rx="3" stroke="#3FBFFF" stroke-width="2"/>
-                            <line x1="8" y1="7" x2="15" y2="7" stroke="#FFA858" stroke-width="2"/>
-                            <line x1="8" y1="11" x2="15" y2="11" stroke="#3FBFFF" stroke-width="2"/>
-                            <line x1="8" y1="15" x2="13" y2="15" stroke="#3FBFFF" stroke-width="2"/>
-                        </svg>
+                    <div>
+                        <div class="cf-kicker"><span class="cf-dot" aria-hidden="true"></span> Passo 1</div>
+                        <div class="cf-icon" aria-hidden="true">
+                            <!-- Ícone caderno -->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <rect x="4" y="3" width="14" height="18" rx="3" stroke="#3FBFFF" stroke-width="2"/>
+                                <line x1="8" y1="7" x2="15" y2="7" stroke="#FFA858" stroke-width="2"/>
+                                <line x1="8" y1="11" x2="15" y2="11" stroke="#3FBFFF" stroke-width="2"/>
+                                <line x1="8" y1="15" x2="13" y2="15" stroke="#3FBFFF" stroke-width="2"/>
+                            </svg>
+                        </div>
                     </div>
-                    <h3 class="cf-title">Conte o que estudou</h3>
+                    <h3 class="cf-title">Conte o que quer revisar</h3>
                     <p class="cf-text">Selecione baralhos/assuntos, registre o que já viu e o que deseja priorizar.</p>
                 </li>
 
                 <!-- Passo 2 -->
                 <li class="cf-step cf-right">
-                    <div class="cf-kicker"><span class="cf-dot" aria-hidden="true"></span> Passo 2</div>
-                    <div class="cf-icon" aria-hidden="true">
-                        <!-- Ícone raio/IA -->
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="9" stroke="#FFA858" stroke-width="2"/>
-                            <path d="M13 3L6 13h6l-1 8 7-10h-6l1-8z" fill="#FFA858" stroke="#003D5C" stroke-width=".6"/>
-                        </svg>
+                    <div class="header-cf-step">
+                        <div class="cf-kicker"><span class="cf-dot" aria-hidden="true"></span> Passo 2</div>
+                        <div class="cf-icon" aria-hidden="true">
+                            <!-- Ícone raio/IA -->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="9" stroke="#FFA858" stroke-width="2"/>
+                                <path d="M13 3L6 13h6l-1 8 7-10h-6l1-8z" fill="#FFA858" stroke="#003D5C" stroke-width=".6"/>
+                            </svg>
+                        </div>
                     </div>
-                    <h3 class="cf-title">Revise com a inteligência</h3>
-                    <p class="cf-text">O app agenda as próximas revisões (FSRS) conforme seu desempenho e promove <em>active recall</em>.</p>
+                    <h3 class="cf-title">Revise com inteligência</h3>
+                    <p class="cf-text">Nosso algoritmo de repetição espaçada monta sua agenda diária conforme seu desempenho.</p>
                 </li>
 
                 <!-- Passo 3 -->
                 <li class="cf-step cf-left">
-                    <div class="cf-kicker"><span class="cf-dot" aria-hidden="true"></span> Passo 3</div>
-                    <div class="cf-icon" aria-hidden="true">
-                        <!-- Ícone gráfico -->
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <rect x="4" y="10" width="3" height="8" rx="1" fill="#3FBFFF"/>
-                            <rect x="10" y="7" width="3" height="11" rx="1" fill="#3FBFFF"/>
-                            <rect x="16" y="4" width="3" height="14" rx="1" fill="#3FBFFF"/>
-                            <path d="M4 19h16" stroke="#FFA858" stroke-width="2"/>
-                        </svg>
+                    <div class="header-cf-step">
+                        <div class="cf-kicker"><span class="cf-dot" aria-hidden="true"></span> Passo 3</div>
+                        <div class="cf-icon" aria-hidden="true">
+                            <!-- Ícone gráfico -->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <rect x="4" y="10" width="3" height="8" rx="1" fill="#3FBFFF"/>
+                                <rect x="10" y="7" width="3" height="11" rx="1" fill="#3FBFFF"/>
+                                <rect x="16" y="4" width="3" height="14" rx="1" fill="#3FBFFF"/>
+                                <path d="M4 19h16" stroke="#FFA858" stroke-width="2"/>
+                            </svg>
+                        </div>
                     </div>
-                    <h3 class="cf-title">Acompanhe a evolução</h3>
-                    <p class="cf-text">Veja retenção por matéria, streaks e próximos passos. Se pular um dia, o plano é replanejado.</p>
+                    <h3 class="cf-title">Acompanhe sua evolução</h3>
+                    <p class="cf-text">Veja seu domínio e acertos para identificar rapidamente onde focar e quais conteúdos aprimorar.</p>
                 </li>
             </ol>
         </div>
+
+        <p class="cf-cta"><a href="#formulario">Quero meu acesso grátis</a></p>   
     </section>
 
-    <!-- 5) Metodologia (base científica) -->
-    <section id="metodologia" aria-labelledby="metodologia-title">
-        <div class="met-wrap">
-            <header class="met-header">
-            <h2 id="metodologia-title">
-                <span class="met-emoji" aria-hidden="true">🧠</span>
-                Metodologia <span class="scribble">— por que funciona</span>
-            </h2>
-            <p class="met-sub">
-                Repetição espaçada + teste ativo + mistura inteligente: a tríade que transforma estudo em <strong>retenção de longo prazo</strong>.
-            </p>
-            </header>
+    <!-- 5) Exemplo flashcard -->
+    <section id="card-flip">
+        <div class="flip-wrap">
+            <h2>Veja um exemplo</h2>
+            <p class="flip-intro">Toque na carta para ver a resposta — igual no app.</p>
 
-            <div class="pqf__wrap">
-                <div class="pqf__grid">
-                    <!-- 1) Repetição espaçada -->
-                    <article class="pqf__card">
-                        <h3>Repetição espaçada</h3>
-                        <p class="pqf__why">
-                        Pesquisas mostram que distribuir revisões ao longo do tempo aumenta a retenção de longo prazo
-                        e reduz o esquecimento — principalmente quando o intervalo é bem calibrado ao objetivo.¹²
-                        </p>
-                        <ul class="pqf__so-what">
-                            <li><strong>No app:</strong> o algoritmo agenda revisões quando o ganho de memória é maior (nem cedo demais, nem tarde).</li>
-                        </ul>
-                    </article>
-
-                    <!-- 2) Prática de recuperação (testing effect) -->
-                    <article class="pqf__card">
-                        <h3>Prática de recuperação</h3>
-                        <p class="pqf__why">
-                        “Ser testado” (tentar lembrar) fortalece a memória mais do que reler ou resumir. Em estudos,
-                        a recuperação supera até técnicas elaborativas em aprendizado significativo.³⁴
-                        </p>
-                        <ul class="pqf__so-what">
-                            <li><strong>No app:</strong> cada card exige resposta ativa antes de revelar — é treino de prova a cada revisão.</li>
-                        </ul>
-                    </article>
-
-                    <!-- 3) Intercalação e variação -->
-                    <article class="pqf__card">
-                        <h3>Intercalação e variação</h3>
-                        <p class="pqf__why">
-                        Misturar tópicos relacionados e variar exemplos melhora a discriminação entre conceitos e
-                        evita “ilusão de domínio”. Revisão intercalada favorece retenção e transferência.¹
-                        </p>
-                        <ul class="pqf__so-what">
-                            <li><strong>No app:</strong> trilhas de revisão alternam assuntos de forma intencional — sem maratonar um único tema.</li>
-                        </ul>
-                    </article>
-
-                    <!-- 4) Métricas e metacognição -->
-                    <article class="pqf__card">
-                        <h3>Métricas que corrigem a intuição</h3>
-                        <p class="pqf__why">
-                        Alunos tendem a superestimar o que “sentem” que sabem. Indicadores objetivos (acerto, tempo,
-                        estabilidade) guiam decisões melhores de estudo e reduzem re-leitura improdutiva.¹
-                        </p>
-                        <ul class="pqf__so-what">
-                            <li><strong>No app:</strong> domínio por tópico, acertos e cadência mostram onde insistir e onde avançar.</li>
-                        </ul>
-                    </article>
+            <label class="flip">
+                <input type="checkbox" aria-label="Virar a carta para ver a resposta" />
+                <div class="flip-card">
+                    <div class="flip-face flip-front">
+                        <p class="flip-label">Pergunta</p>
+                        <p class="flip-q">O que diz a 1ª Lei de Newton?</p>
+                        <p class="flip-hint">Toque para virar</p>
+                    </div>
+                    <div class="flip-face flip-back">
+                        <p class="flip-label">Resposta</p>
+                        <p class="flip-a">Inércia: um corpo mantém repouso ou MRU se a força resultante for nula.</p>
+                        <p class="flip-hint">Toque para voltar</p>
+                    </div>
                 </div>
+            </label>
 
-                <p class="pqf__cta"><a href="#formulario">Quero meu acesso grátis</a></p>
-
-                <!-- Notas visuais para o leitor (opcional manter) -->
-                <ol class="pqf__refs">
-                <li>Revisões espaçadas e intercaladas estão entre as técnicas de maior utilidade para estudantes.</li>
-                <li>Intervalos calculados maximizam retenção ao longo de semanas/meses até o teste final.</li>
-                <li>Prática de recuperação aumenta aprendizagem significativa versus apenas estudar/organizar.</li>
-                <li>O efeito de teste é robusto e replicado em contextos educacionais.</li>
-                </ol>
-            </div>
-
-            </div>
+            <p class="flip-cta"><a href="#formulario">Quero meu acesso grátis</a></p>
         </div>
     </section>
 
-    <!-- 6) Para quem é -->
+    <!-- 6) Professores aprovam -->
+    <section id="prova-social">
+        <div class="ps-wrap">
+            <h2>Professores aprovam</h2>
+            <p>Quem está no dia a dia da preparação para ENEM e vestibulares recomenda o Academy Cards.</p>
+
+            <!-- setas -->
+            <button class="ps-arrow ps-prev" aria-label="Anterior" type="button">‹</button>
+            <button class="ps-arrow ps-next" aria-label="Próximo"  type="button">›</button>
+
+            <!-- visor (recorta) -->
+            <div class="ps-viewport" aria-roledescription="carousel" aria-label="Depoimentos de professores">
+                <!-- trilho (move com transform) -->
+                <div class="ps-track" id="psTrack">
+                    <!-- seus artigos viram slides -->
+                    <article class="ps-slide">
+                        <figure>
+                            <img src="./imagens/Bizu Matemática.jpeg" alt="" loading="lazy" />
+                            <figcaption>
+                                <strong>Prof. Bizu</strong><br />
+                                Licenciatura em Matemática pela USP
+                            </figcaption>
+                        </figure>
+                        <blockquote>
+                            <p>“Como professor, recomendo demais os flashcards para estudar para o vestibular. Esse aplicativo é uma ferramenta prática para fixar fórmulas, propriedades e conceitos. A repetição direcionada melhora muito o aprendizado e a memorização.”</p>
+                        </blockquote>
+                    </article>
+
+                    <article class="ps-slide">
+                        <figure>
+                            <img src="./imagens/Aline Diniz.png" alt="" loading="lazy" />
+                            <figcaption>
+                                <strong>Profa. Aline Diniz</strong><br />
+                                Licenciatura em Biologia pela UFMG e Universidade de Évora
+                            </figcaption>
+                        </figure>
+                        <blockquote>
+                            <p>“Revisar os conteúdos de Biologia do Academy Cards foi uma ótima experiência. Os flashcards estão bem feitos e serão uma ferramenta valiosa para revisar e reforçar a preparação de quem está estudando para o vestibular.”</p>
+                        </blockquote>
+                    </article>
+
+                    <article class="ps-slide">
+                        <figure>
+                            <img src="./imagens/Joab História.jpeg" alt="" loading="lazy" />
+                            <figcaption>
+                                <strong>Prof. Joab Cruz</strong><br />
+                                Licenciatura em História pela UESB
+                            </figcaption>
+                        </figure>
+                        <blockquote>
+                            <p>“Participei ativamente da preparação do material didático do Academy Cards e sou um entusiasta da qualidade e inovação desse projeto. Com base na minha experiência com alunos pré-Enem, endosso seu caráter promissor e eficiente como método de fixação de conteúdos e avaliação do aprendizado.”</p>
+                        </blockquote>
+                    </article>
+
+                    <article class="ps-slide">
+                        <figure>
+                            <img src="./imagens/Livian Química.jpeg" alt="" loading="lazy" />
+                            <figcaption>
+                                <strong>Profa. Livian Kessy</strong><br />
+                                Licenciatura em Química pela UFMG
+                            </figcaption>
+                        </figure>
+                        <blockquote>
+                            <p>“Essa é uma ferramenta indispensável para quem quer mandar bem no ENEM! Os flashcards prontos com todo o conteúdo do ENEM e organizados pelo método de revisão espaçada tornam o estudo mais dinâmico e eficiente. Você pode estudar quando e onde quiser, com muito mais praticidade e foco!”</p>
+                        </blockquote>
+                    </article>
+
+                    <article class="ps-slide">
+                        <figure>
+                            <img src="./imagens/Juliana Geografia.jpeg" alt="" loading="lazy" />
+                            <figcaption>
+                                <strong>Profa. Juliana Rosenburg</strong><br />
+                                Licenciatura em Geografia pela UFMG
+                            </figcaption>
+                        </figure>
+                        <blockquote>
+                            <p>“Revisar os conteúdos do app foi uma experiência incrível! Tenho certeza que o app está alinhado com as principais cobranças e habilidades exigidas nos vestibulares. Além disso, os flashcards são uma forma criativa e dinâmica de estudar, o que vai facilitar bastante os estudos com linguagem acessível e conceitos bem trabalhados. Me sinto muito feliz de ter contribuído!”</p>
+                        </blockquote>
+                    </article>
+
+                    <article class="ps-slide">
+                        <figure>
+                            <img src="./imagens/Vinicius Geografia.jpeg" alt="" loading="lazy" />
+                            <figcaption>
+                                <strong>Prof. Vinicius Maciel</strong><br />
+                                Licenciatura em Geografia pela UFMG
+                            </figcaption>
+                        </figure>
+                        <blockquote>
+                            <p>“Contribuir com a produção dos conteúdos da Academy Cards foi uma experiência muito valiosa. O projeto demonstra um cuidado especial com a clareza, a precisão conceitual e a adequação ao que realmente é cobrado nos principais vestibulares do país. A plataforma irá oferecer aos estudantes uma ferramenta acessível e dinâmica para revisar os conteúdos mais importantes.”</p>
+                        </blockquote>
+                    </article>
+
+                </div>
+            </div>
+
+            <p class="ps-cta"><a href="#formulario">Quero meu acesso grátis</a></p>
+        </div>
+    </section>
+
+    <!-- 7) Para quem é -->
     <section id="para-quem-e" class="pqe-map">
         <div class="pqe-map__wrap">
             <header class="pqe-map__header">
@@ -444,8 +439,7 @@
         </div>
     </section>
 
-
-    <!-- 7) Oferta & Urgência (reforço) -->
+    <!-- 8) Oferta & Urgência (reforço) -->
     <section id="oferta" class="ofx ofx--play" aria-labelledby="oferta-title">
         <div class="ofx__wrap">
             <header class="ofx__header">
@@ -490,9 +484,7 @@
         </div>
     </section>
 
-
-    <!-- 8) FAQ -->
-<!-- FAQ -->
+    <!-- 9) FAQ -->
     <section id="faq" class="faqx" aria-labelledby="faq-title">
         <div class="faqx__wrap">
             <header class="faqx__header">
@@ -609,8 +601,7 @@
         </div>
     </section>
 
-
-    <!-- 9) Formulário -->
+    <!-- 10) Formulário -->
     <section id="formulario" class="formx" aria-labelledby="formx-title">
         <div class="formx__wrap">
             <header class="formx__header">
@@ -689,7 +680,7 @@
         </div>
     </section>
 
-    <!-- 10) Rodapé -->
+    <!-- 11) Rodapé -->
     <footer>
         <section class="footer-content">
             <div class="footer-logo">
@@ -710,7 +701,7 @@
         <p class="copyright">© 2024 Academy Cards. Todos os direitos reservados.</p>
     </footer>
 
-
+    <!-- script de "Prova Social" -->
     <script>
     (function () {
         const track = document.getElementById('psTrack');
@@ -766,8 +757,8 @@
     })();
     </script>
 
+    <!-- Contador regressivo (deadline em data-deadline) -->
     <script>
-    /* ===== Contador regressivo (deadline em data-deadline) ===== */
     (function(){
         const box = document.querySelector('#oferta.ofx--play .ofx__timer');
         if (!box) return;
@@ -800,8 +791,8 @@
     })();
     </script>
 
+    <!-- UX opcional para o formulário nativo -->
     <script>
-    /* ===== UX opcional para o formulário nativo ===== */
     (function(){
         const form = document.getElementById('cadastro');
         if (!form) return;
