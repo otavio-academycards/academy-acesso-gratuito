@@ -1052,13 +1052,6 @@ will-change: transform;
 
 /* ===== Seção: Ofertas e preços ===== */
 
-
-#oferta.ofx--play,
-#oferta .ofx__wrap,
-#oferta .ofx__grid{
-  overflow-x: clip;   /* (pode usar hidden se preferir) */
-}
-
 .ofx--play{
   padding: 30px 15px;
   background:
@@ -1082,7 +1075,7 @@ will-change: transform;
 }
 
 .ofx--play h2{
-  margin: 0 0 25px 0;
+  margin: 0 0 30px 0;
   font-size: clamp(26px, 2.2vw, 40px);
   line-height: 1.12;
 }
@@ -1097,8 +1090,8 @@ will-change: transform;
   display: grid;
   gap: 16px;
   grid-template-columns: 1fr; /* mobile */
-  width: 90%;
   margin: auto;
+  padding: 15px;
 }
 
 @media (min-width: 980px){
@@ -1136,8 +1129,8 @@ will-change: transform;
 /* selo “GRÁTIS” inclinado */
 .ofx--play .ofx__ribbon{
   position: absolute;
-  top: 14px;
-  left: -30px;
+  top: -20px;
+  left: 0px;
   background: #FFE86D;
   color: #07232F;
   font-weight: 900;
@@ -1216,7 +1209,7 @@ will-change: transform;
 /* timer estilo “cards” */
 .ofx--play .ofx__timer{
   display: grid;
-  grid-template-columns: repeat(4, minmax(70px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   margin: 0 0 12px 0;
 }
@@ -1254,7 +1247,10 @@ will-change: transform;
 }
 
 /* CTA + confiança */
-.ofx--play .ofx__cta{ margin: 15px 0 15px 0; }
+.ofx--play .ofx__cta{
+  margin: 25px 0 25px 0;
+}
+
 .ofx--play .ofx__btn{
   display: inline-block;
   text-decoration: none;
@@ -1287,7 +1283,6 @@ will-change: transform;
   border-radius: 20px;
   box-shadow: 0 8px 22px rgba(0,0,0,.08);
   padding: 16px;
-  position: relative;
 }
 
 .ofx--play .ofx__bullets{
