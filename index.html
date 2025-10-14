@@ -488,9 +488,8 @@
     <section id="formulario" class="formx" aria-labelledby="formx-title">
         <div class="formx__wrap">
             <header class="formx__header">
-                <span class="formx__sticker" aria-hidden="true">última etapa</span>
                 <h2 id="formx-title">Liberar meu acesso grátis</h2>
-                <p class="formx__lead">Preencha seus dados. Enviaremos o acesso por e-mail em até <strong>24 horas</strong>.</p>
+                <p class="formx__lead">Preencha seus dados. Enviaremos o acesso por e-mail em até <strong>48 horas</strong>.</p>
             </header>
 
             <form class="formx__panel formx__panel--native" id="cadastro" novalidate>
@@ -526,12 +525,7 @@
                     </div>
 
                     <div class="formx__field">
-                        <label for="escola">Escola/Curso <span class="formx__opt">(opcional)</span></label>
-                        <input id="escola" name="escola" type="text" placeholder="Ex.: Colégio X / Curso Y" />
-                    </div>
-
-                    <div class="formx__field">
-                        <label for="whatsapp">WhatsApp <span class="formx__opt">(opcional)</span></label>
+                        <label for="whatsapp">WhatsApp <span aria-hidden="true">*</span></label>
                         <input id="whatsapp" name="whatsapp" type="tel" inputmode="numeric" autocomplete="tel" placeholder="(DDD) 9xxxx-xxxx" />
                         <small class="formx__msg" data-for="whatsapp">Apenas números (com DDD).</small>
                     </div>
@@ -549,12 +543,11 @@
                     </div>
                 </div>
 
-                <p class="formx__cta">
-                    <button type="submit" class="formx__btn">Liberar meu acesso grátis</button>
-                </p>
+                <p class="formx__fineprint"><em>Verifique a caixa de entrada e o spam.</em></p>
 
-                <p class="formx__trust">Dados protegidos • Sem cartão • Cancelar quando quiser</p>
-                <p class="formx__fineprint"><em>Enviaremos o acesso em até 24h. Verifique a caixa de entrada e o spam.</em></p>
+                <p class="formx__cta">
+                    <button type="submit" class="formx__btn">Liberar meu acesso</button>
+                </p>
 
                 <!-- Mensagens -->
                 <div class="formx__alert formx__alert--ok" role="status" hidden>✅ Recebido! Enviaremos seu acesso por e-mail.</div>
