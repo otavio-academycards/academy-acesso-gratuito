@@ -12,7 +12,6 @@
     Cinza claro: #E7F7FF
 */
 
-
 *{
   margin: 0px;
   padding: 0px;
@@ -28,6 +27,12 @@ html{ scroll-behavior: smooth; } /* se quiser scroll suave nativo */
 
 html{ font-family: var(--font-body); }
 h1,h2,h3,h4{ font-family: var(--font-heading); letter-spacing:.1px; }
+
+.logo{
+    padding: 15px 0 0 0;
+    background: #FFE86D;
+    text-align: center;
+}
 
 #urgencia{
     position: sticky;
@@ -70,7 +75,7 @@ h1,h2,h3,h4{ font-family: var(--font-heading); letter-spacing:.1px; }
 
 #hero{
     background: #FFE86D;  /* leve realce de fundo */
-    padding: 30px 15px;
+    padding: 0px 15px 30px 15px;
 }
 
 #hero .hero-wrap{
