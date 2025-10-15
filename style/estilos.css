@@ -87,10 +87,11 @@ h1,h2,h3,h4{ font-family: var(--font-heading); letter-spacing:.1px; }
   display: grid;
   gap: 20px;
   padding-bottom: 25px;
+  max-width: 600px;
 }
 
 #hero h1{
-  font-size: clamp(30px, 2.2vw, 45px); /* maior, dominante */
+  font-size: clamp(30px, 0.8vw, 45px); /* maior, dominante */
   line-height: 1.08;
   letter-spacing: .2px;
   color: #001A27;
@@ -219,7 +220,6 @@ h1,h2,h3,h4{ font-family: var(--font-heading); letter-spacing:.1px; }
   font-size: clamp(14px, 1.8vw, 16px);
   line-height: 1.45;
   color: #001A27;
-  margin-top: auto;
 }
 
 #proposta-valor .pv-cta a{
@@ -398,6 +398,7 @@ h1,h2,h3,h4{ font-family: var(--font-heading); letter-spacing:.1px; }
   display: grid;
   justify-items: center;
   gap: 20px;
+  max-width: 700px;
 }
 
 #prova-social h2{
@@ -558,7 +559,7 @@ h1,h2,h3,h4{ font-family: var(--font-heading); letter-spacing:.1px; }
 #como-funciona .cf-sub{
   color:#001A27;
   font-size:15px;
-  margin:0;
+  text-align: center;
 }
 
 /* ====== Trilha MOBILE (grossa) ====== */
@@ -566,9 +567,10 @@ h1,h2,h3,h4{ font-family: var(--font-heading); letter-spacing:.1px; }
 /* ====== Passos (markup único) ====== */
 #como-funciona .cf-steps{
   margin:30px auto 0;
-  display:grid;
+  display:flex;
+  flex-flow: column nowrap;
+  align-items: center;
   gap:40px;                    /* espaço entre passos */
-  grid-template-columns:1fr;   /* mobile: 1 coluna */
   position:relative;
   z-index:2;
   list-style: none;
@@ -579,19 +581,19 @@ h1,h2,h3,h4{ font-family: var(--font-heading); letter-spacing:.1px; }
   border: 1px solid #E6F2FA;
   border-radius: 18px;
   padding: 20px;
+  max-width: 440px;
 }
 
-#como-funciona .cf-left {
+#como-funciona #cf-left {
   transform: translateX(4vw);
 }
 
-#como-funciona .cf-right {
-  justify-self: end;
+#como-funciona #cf-right {
   transform: translateX(-4vw);
 }
 
-#como-funciona .cf-step.cf-left::before,
-#como-funciona .cf-step.cf-right::before{
+#cf-left::before,
+#cf-right::before{
   content: "";
   position: absolute;
   top: 24px;
@@ -603,8 +605,8 @@ h1,h2,h3,h4{ font-family: var(--font-heading); letter-spacing:.1px; }
   box-shadow: 0 0 0 6px rgba(63,191,255,.15), inset 0 0 0 4px #3FBFFF;
 }
 
-#como-funciona .cf-step.cf-left::before{ left: -22px; }
-#como-funciona .cf-step.cf-right::before{ right: -22px; }
+#cf-left::before{ left: -22px; }
+#cf-right::before{ right: -22px; }
 
 #como-funciona .header-cf-step{
   display: flex;
@@ -697,9 +699,6 @@ h1,h2,h3,h4{ font-family: var(--font-heading); letter-spacing:.1px; }
 /* se ainda não tiver */
 overflow: hidden; /* impede a trilha de vazar para fora da seção */
 }
-#como-funciona .cf-wrap{ position: relative; overflow: hidden; }
-#como-funciona .cf-steps{ position: relative; z-index: 2; }
-
 
 /* ——— Trilha MOBILE (SVG) ——— */
 #como-funciona .cf-trail-mobile{
@@ -740,12 +739,10 @@ will-change: transform;
 #como-funciona #cf-arrow-head path{ fill:#3FBFFF; }
 
 
-/* ——— Breakpoint: mostra a S-curve no desktop ——— */
-@media (min-width:901px){
-#como-funciona .cf-trail-mobile{ display:none; }
-#como-funciona .cf-trail-desktop{ display:block; }
+#como-funciona .cf-trail-base,
+#como-funciona .cf-trail-core{
+  vector-effect: non-scaling-stroke; /* impede engrossar/afinar com escalas */
 }
-
 
 /* CTA da seção */
 #como-funciona .cf-cta a{
@@ -861,7 +858,9 @@ will-change: transform;
 
 /* Cartinhas (cards) */
 .pqf__card{
-  position: relative;
+  position: relative;                     /* para o sticker */
+  margin: auto;
+  max-width: 500px;
   background: #F7FCFF;
   border: 2px solid rgba(7,35,47,.10);
   border-radius: 16px;
@@ -944,15 +943,21 @@ will-change: transform;
   color: #173845;
   line-height: 1.55;
   text-align: center;
-  max-width: 70ch;
 }
 
 /* ===== Linha vertical ===== */
 .pqe-map .pqe-map__line{
   list-style: none;
-  margin: 0;
+  margin: auto;
   padding: 8px 0 8px 0;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;                             /* espaço entre estações */
+  max-width: 520px;
+  z-index: 1;                            /* abaixo dos itens */
+  align-items: stretch;                 /* itens ocupam toda a largura */
 }
 
 .pqe-map .pqe-map__line::before{
@@ -968,16 +973,16 @@ will-change: transform;
     #E7F7FF 14px, #E7F7FF 24px /* amarelo accent */
   );
   border-radius: 8px;
+
 }
 
 /* ===== Estações (itens) ===== */
 .pqe-map .pqe-item{
   display: grid;
   grid-template-columns: 72px 1fr;       /* badge | bubble (mobile) */
-  align-items: start;
+  align-items: center;
   gap: 10px;
   position: relative;
-  padding: 10px 0;
 }
 
 /* Badge (estação) */
@@ -1000,7 +1005,6 @@ will-change: transform;
 
 /* Balão de fala */
 .pqe-map .pqe-item__bubble{
-  grid-column: 2;
   position: relative;
   background: #E7F7FF;
   border: 1px solid rgba(7,35,47,.08);
@@ -1011,6 +1015,11 @@ will-change: transform;
   padding: 16px 20px;
   box-shadow: 0 8px 22px rgba(0,0,0,.08);
   text-align: center;
+  max-width: 560px;
+  min-height: clamp(100px, 2vw, 125px); /* ajuste a gosto */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .pqe-map .pqe-item__bubble h3{
@@ -1089,16 +1098,16 @@ will-change: transform;
 .ofx--play .ofx__grid{
   display: grid;
   gap: 16px;
-  grid-template-columns: 1fr; /* mobile */
-  margin: auto;
+  grid-template-columns: minmax(0, 500px);
   padding: 15px;
+  justify-content: center;
+  justify-items: center;
 }
 
-@media (min-width: 980px){
-.ofx--play .ofx__grid{
-  grid-template-columns: 1fr 1fr;
-  column-gap: 22px;
-}
+.ofx--play .ofx__ticket,
+.ofx--play .ofx__value{
+  width: 100%;                 /* preenche o trilho */
+  max-width: 500px;
 }
 
 /* ===== Ticket (preço + timer + CTA) ===== */
@@ -1112,6 +1121,7 @@ will-change: transform;
   text-align: center;
   /* “perfurado” nas laterais */
   --dot: radial-gradient(circle at center, #fff 45%, rgba(7,35,47,.12) 46%, transparent 47%);
+  max-width: 500px;
 }
 
 .ofx--play .ofx__ticket::before,
@@ -1197,10 +1207,6 @@ will-change: transform;
   100%{ box-shadow: 0 0 0 0 rgba(63,191,255,0); }
 }
 
-@media (prefers-reduced-motion: reduce){
-  .ofx--play .ofx__now::after{ animation: none; }
-}
-
 .ofx--play .ofx__note{
   margin: 4px 0 10px 0;
   color: #173845;
@@ -1283,6 +1289,7 @@ will-change: transform;
   border-radius: 20px;
   box-shadow: 0 8px 22px rgba(0,0,0,.08);
   padding: 16px;
+  max-width: 500px;
 }
 
 .ofx--play .ofx__bullets{
@@ -1348,7 +1355,7 @@ will-change: transform;
 
 #faq.faqx .faqx__wrap{
   max-width: 1400px;
-  margin: 0 auto;
+  margin: auto;
   padding: 20px 10px 20px;
 }
 
@@ -1367,7 +1374,6 @@ will-change: transform;
   margin: 0 0 16px 0;
   color: #173845;
   line-height: 1.55;
-  max-width: 70ch;
 }
 
 /* Grid de itens (mobile-first) */
@@ -1375,13 +1381,8 @@ will-change: transform;
   display: grid;
   gap: 12px;
   grid-template-columns: 1fr;         /* mobile */
-}
-
-@media (min-width: 980px){
-  #faq.faqx .faqx__grid{
-    grid-template-columns: 1fr 1fr;   /* desktop em 2 colunas */
-    column-gap: 22px;
-  }
+  max-width: 700px;
+  margin: auto;
 }
 
 /* Item FAQ (details como card de papel) */
@@ -1513,9 +1514,10 @@ will-change: transform;
 }
 
 .formx .formx__wrap{
-  max-width: 1400px;
+  max-width: 600px;
   margin: 0 auto;
   padding: 20px 20px;
+  width: 90vw;
 }
 
 /* Header com sticker */
@@ -1542,13 +1544,6 @@ will-change: transform;
   display: grid;
   gap: 12px;
   grid-template-columns: 1fr; /* mobile */
-}
-
-@media (min-width: 980px){
-  .formx .formx__grid{
-    grid-template-columns: 1fr 1fr; column-gap: 22px;
-  }
-  .formx .formx__field--checks{ grid-column: 1 / -1; }
 }
 
 /* Campos */

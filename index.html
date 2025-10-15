@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academy Cards — Acesso grátis até 31/12</title>
     <link rel="stylesheet" href="style/estilos.css">
+    <link rel="stylesheet" href="style/media-queries.css">
     <link rel="icon" href="#" type="image/x-icon">
 </head>
 <body>
@@ -45,8 +46,8 @@
         <div class="hero-wrap">
             <div class="texto-imagem">
                 <div class="hero-texto">
-                    <h1>Garanta sua aprovação no <span class="destaque">ENEM</span> revisando todo o conteúdo <span class="destaque">de graça</span></h1>
-                    <p class="hero-sub">Acesse gratuitamente 15.000+ flashcards com todo o conteúdo do ENEM para você focar apenas no que importa! Revise de forma prática e eficiente com poucos minutos por dia.</p>
+                    <h1>Garanta sua aprovação no <span class="destaque">ENEM</span> revisando todo o conteúdo <span class="destaque">DE GRAÇA</span></h1>
+                    <p class="hero-sub">Acesse gratuitamente 15.000+ flashcards com todo o conteúdo do ENEM para você revisar de forma prática e eficiente.</p>
                 </div>
                 <!-- Imagem no Hero (opcional, ver item 2) -->
                 <figure class="hero-imagem">
@@ -75,7 +76,7 @@
                 
                 <div class="valores-wrap">
                     <div class="valores-item">
-                        <img src="imagens/carta2.png" alt="valor 1">
+                        <img src="imagens/carta2.png" alt="valor 2">
                         <h3>Conteúdo pronto e organizado</h3>
                     </div>
                     <p>São mais de 15.000 flashcards organizados por disciplina e tópico para você não perder tempo.</p>
@@ -83,7 +84,7 @@
 
                 <div class="valores-wrap">
                     <div class="valores-item">
-                        <img src="imagens/carta3.png" alt="valor 1">
+                        <img src="imagens/carta3.png" alt="valor 3">
                         <h3>Métricas que guiam</h3>
                     </div>
                     <p>Acompanhe domínio, acertos e tempo estudado para saber onde focar até o dia da prova.</p>
@@ -91,7 +92,7 @@
 
                 <div class="valores-wrap">
                     <div class="valores-item">
-                        <img src="imagens/carta4.png" alt="valor 1">
+                        <img src="imagens/carta4.png" alt="valor 4">
                         <h3>Personalize quando precisar</h3>
                     </div>
                     <p>Crie seus próprios cards e baralhos para adaptar o estudo às suas necessidades.</p>
@@ -194,7 +195,7 @@
             <!-- Passos (um único markup; layout e zigue-zague ficam no CSS) -->
             <ol class="cf-steps" role="list" aria-label="Passos do aplicativo">
                 <!-- Passo 1 -->
-                <li class="cf-step cf-left">
+                <li class="cf-step" id="cf-left">
                     <div class="header-cf-step">
                         <div class="cf-kicker"><span class="cf-dot" aria-hidden="true"></span> Passo 1</div>
                         <div class="cf-icon" aria-hidden="true">
@@ -212,7 +213,7 @@
                 </li>
 
                 <!-- Passo 2 -->
-                <li class="cf-step cf-right">
+                <li class="cf-step" id="cf-right">
                     <div class="header-cf-step">
                         <div class="cf-kicker"><span class="cf-dot" aria-hidden="true"></span> Passo 2</div>
                         <div class="cf-icon" aria-hidden="true">
@@ -228,7 +229,7 @@
                 </li>
 
                 <!-- Passo 3 -->
-                <li class="cf-step cf-left">
+                <li class="cf-step" id="cf-left">
                     <div class="header-cf-step">
                         <div class="cf-kicker"><span class="cf-dot" aria-hidden="true"></span> Passo 3</div>
                         <div class="cf-icon" aria-hidden="true">
@@ -390,7 +391,7 @@
                     <span class="pqe-item__badge" aria-hidden="true">🎯</span>
                     <div class="pqe-item__bubble">
                         <h3>Vai fazer ENEM e vestibulares</h3>
-                        <p>Conteúdo alinhado às competências cobradas e às áreas do exame.</p>
+                        <p>Conteúdo alinhado às competências cobradas.</p>
                     </div>
                 </li>
 
@@ -532,12 +533,12 @@
 
                     <div class="formx__field formx__field--checks">
                         <label class="formx__check">
-                            <input type="checkbox" id="termos" required />
+                            <input type="checkbox" id="termos" required checked/>
                             <span>Li e concordo com os <a href="#termos">Termos de Uso</a> e a <a href="#privacidade">Política de Privacidade</a>.</span>
                         </label>
 
                         <label class="formx__check">
-                            <input type="checkbox" id="optin" />
+                            <input type="checkbox" id="optin" checked/>
                             <span>Quero receber dicas e avisos por e-mail/WhatsApp.</span>
                         </label>
                     </div>
