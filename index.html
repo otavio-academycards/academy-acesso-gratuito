@@ -3,12 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Revisões espaçadas com 12.000+ flashcards do ENEM. Acesso grátis até 31/12.">
     <title>Academy Cards — Acesso grátis até 31/12</title>
     <link rel="stylesheet" href="style/estilos.css">
     <link rel="stylesheet" href="style/media-queries.css">
-    <link rel="icon" href="#" type="image/x-icon">
+    <link rel="icon" href="./imagens/fundo-branco-stroke-preto2.ico" type="image/x-icon">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id=GTM-MVB5S6BK'+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MVB5S6BK');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1818724648850526');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1818724648850526&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
 </head>
 <body>
+      <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVB5S6BK"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     
     <!-- 0) Barra de urgência -->
     <header id="urgencia">
@@ -493,10 +525,10 @@
                 <p class="formx__lead">Preencha seus dados. Enviaremos o acesso por e-mail em até <strong>48 horas</strong>.</p>
             </header>
 
-            <form class="formx__panel formx__panel--native" id="cadastro" novalidate>
+            <form id="acesso-teste-forms" method="post" action="" target="noop">
                 <!-- Honeypot (anti-bot) -->
                 <label class="formx__hp" aria-hidden="true">Não preencha
-                    <input type="text" name="website" tabindex="-1" autocomplete="off">
+                    <input type="text" name="hp_website" tabindex="-1" autocomplete="off">
                 </label>
 
                 <div class="formx__grid">
@@ -527,33 +559,38 @@
 
                     <div class="formx__field">
                         <label for="whatsapp">WhatsApp <span aria-hidden="true">*</span></label>
-                        <input id="whatsapp" name="whatsapp" type="tel" inputmode="numeric" autocomplete="tel" placeholder="(DDD) 9xxxx-xxxx" />
+                        <input id="whatsapp" name="whatsapp" type="tel" required inputmode="numeric" autocomplete="tel" placeholder="(DDD) 9xxxx-xxxx" />
                         <small class="formx__msg" data-for="whatsapp">Apenas números (com DDD).</small>
                     </div>
 
                     <div class="formx__field formx__field--checks">
                         <label class="formx__check">
-                            <input type="checkbox" id="termos" required checked/>
-                            <span>Li e concordo com os <a href="#termos">Termos de Uso</a> e a <a href="#privacidade">Política de Privacidade</a>.</span>
+                            <input type="checkbox" id="termos" name="termos" required checked/>
+                            <span>Li e concordo com os <a href="http://academy-cards-termos.s3-website-us-east-1.amazonaws.com/termo-uso.html" target="_blank">Termos de Uso</a> e a <a href="http://academy-cards-termos.s3-website-us-east-1.amazonaws.com/aviso-privacidade.html" target="_blank">Política de Privacidade</a>.</span>
                         </label>
 
                         <label class="formx__check">
-                            <input type="checkbox" id="optin" checked/>
+                            <input type="checkbox" id="optin" name="optin" checked/>
                             <span>Quero receber dicas e avisos por e-mail/WhatsApp.</span>
                         </label>
                     </div>
                 </div>
-
+               
                 <p class="formx__fineprint"><em>Verifique a caixa de entrada e o spam.</em></p>
 
+                <!-- Identificador da conversão (você pode manter este valor) -->
+                <input type="hidden" name="conversion_identifier" value="Download e-book: Redação ENEM"> 
+
                 <p class="formx__cta">
-                    <button type="submit" class="formx__btn">Liberar meu acesso</button>
+                    <button class="formx__btn" type="submit">Liberar meu acesso</button>
                 </p>
 
                 <!-- Mensagens -->
                 <div class="formx__alert formx__alert--ok" role="status" hidden>✅ Recebido! Enviaremos seu acesso por e-mail.</div>
                 <div class="formx__alert formx__alert--err" role="alert" hidden>⚠️ Revise os campos destacados e tente novamente.</div>
             </form>
+            <iframe name="noop" style="display:none"></iframe>
+    
         </div>
     </section>
 
@@ -566,7 +603,7 @@
             </header>
 
             <div class="faqx__grid" role="list">
-                <details class="faqx__item" open>
+                <details class="faqx__item">
                     <summary>
                         <h3>É de graça mesmo?</h3>
                         <span class="toggle-icon">+</span>
@@ -677,22 +714,25 @@
     <footer>
         <section class="footer-content">
             <div class="footer-logo">
-                <img src="imagens/Group 633154.png" alt="Logo Lâmpada" width="50px" height="auto">
+                <img src="imagens/Group 633154.png" alt="Logo Lâmpada" loading="lazy" width="50px" height="auto">
             </div>
             <div class="redes-sociais">
                 <a href="https://www.instagram.com/academy.cards?igsh=MXF3d2k2YWd4NWVleQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
-                    <img src="https://academy-cards-imagens-publicas.s3.us-east-1.amazonaws.com/redes/instagram_branco_circular.png" alt="Instagram" width="32px" height="auto">
+                    <img src="https://academy-cards-imagens-publicas.s3.us-east-1.amazonaws.com/redes/instagram_branco_circular.png" alt="Instagram" loading="lazy" width="32px" height="auto">
                 </a>
                 <a href="https://www.tiktok.com/@academy.cards?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer">
-                    <img src="https://academy-cards-imagens-publicas.s3.us-east-1.amazonaws.com/redes/tiktok_branco_circular.png" alt="Tiktok" width="32px" height="auto">
+                    <img src="https://academy-cards-imagens-publicas.s3.us-east-1.amazonaws.com/redes/tiktok_branco_circular.png" alt="Tiktok" loading="lazy" width="32px" height="auto">
                 </a>
                 <a href="https://www.facebook.com/academycards/" target="_blank" rel="noopener noreferrer">
-                    <img src="https://academy-cards-imagens-publicas.s3.us-east-1.amazonaws.com/redes/facebook_branco_circular.png" alt="Facebook" width="32px" height="auto">
+                    <img src="https://academy-cards-imagens-publicas.s3.us-east-1.amazonaws.com/redes/facebook_branco_circular.png" alt="Facebook" loading="lazy" width="32px" height="auto">
                 </a>
             </div>
         </section>
         <p class="copyright">© 2024 Academy Cards. Todos os direitos reservados.</p>
     </footer>
+
+    <!-- RD Station Monitoring -->
+    <script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/c5f21a5f-4978-4c5c-960d-8cb84fad3055-loader.js" ></script>
 
     <!-- script de "Prova Social" -->
     <script>
@@ -787,53 +827,64 @@
     <!-- UX opcional para o formulário nativo -->
     <script>
     (function(){
-        const form = document.getElementById('cadastro');
+        const form = document.querySelector('form#acesso-teste-forms');
         if (!form) return;
 
-        // máscara leve para WhatsApp (somente números, formatação visual)
+        // máscara visual de WhatsApp (11 dígitos BR)
         const fone = form.querySelector('#whatsapp');
         if (fone){
             fone.addEventListener('input', () => {
-            let v = fone.value.replace(/\D/g,'').slice(0,11); // DDD+9 dígitos
-            const parts = [];
-            if (v.length > 0) parts.push('(' + v.slice(0,2) + ')');
-            if (v.length > 2){
-                const mid = v.length > 7 ? v.slice(2,7) + '-' + v.slice(7) : v.slice(2);
-                parts.push(' ' + mid);
-            }
-            fone.value = parts.join('');
+                let v = fone.value.replace(/\D/g,'').slice(0,11);
+                const parts = [];
+                if (v.length > 0) parts.push('(' + v.slice(0,2) + ')');
+                if (v.length > 2){
+                    const mid = v.length > 7 ? v.slice(2,7) + '-' + v.slice(7) : v.slice(2);
+                    parts.push(' ' + mid);
+                }
+                fone.value = parts.join('');
             });
         }
 
-        // validação básica + honeypot
         form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const hp = form.querySelector('.formx__hp input');
-            if (hp && hp.value.trim() !== '') return; // provável bot
+            // honeypot: bloqueia bots (inclusive o RD)
+            const hp = form.querySelector('input[name="hp_website"]');
+            if (hp && hp.value.trim() !== '') {
+                e.stopImmediatePropagation();
+                e.preventDefault();
+                return;
+            }
 
-            const required = ['nome','email','serie','termos'];
+            // validação mínima
+            const required = ['nome','email','serie','termos','whatsapp'];
             let ok = true;
-
             required.forEach(id => {
                 const el = id === 'termos' ? form.querySelector('#termos') : form.querySelector('#'+id);
                 const field = (id === 'termos') ? form.querySelector('.formx__field--checks') : el.closest('.formx__field');
                 if (!el) return;
-                const valid = (id === 'email') ? /^\S+@\S+\.\S+$/.test(el.value) : (id === 'termos' ? el.checked : el.value.trim() !== '');
+                let valid = true;
+                if (id === 'email') valid = /^\S+@\S+\.\S+$/.test(el.value);
+                else if (id === 'whatsapp') valid = /^\D*(\d\D*){11}$/.test(el.value); // 11 dígitos
+                else if (id === 'termos') valid = el.checked;
+                else valid = el.value.trim() !== '';
                 field?.classList.toggle('is-invalid', !valid);
                 if (!valid) ok = false;
             });
 
-            form.querySelector('.formx__alert--ok').hidden = !ok;
-            form.querySelector('.formx__alert--err').hidden = ok;
-
-            if (ok){
-                // aqui você enviaria via fetch/XHR para seu backend ou RD Station (se usar API)
-                form.reset();
-                // foco no aviso
-                form.querySelector('.formx__alert--ok').focus?.();
+            if (!ok) {
+                e.preventDefault();
+                form.querySelector('.formx__alert--ok').hidden = true;
+                form.querySelector('.formx__alert--err').hidden = false;
+                return;
             }
-        }, { passive: false });
+
+            // válido: deixa o submit seguir para o RD capturar
+            form.querySelector('.formx__alert--err').hidden = true;
+            form.querySelector('.formx__alert--ok').hidden = false;
+            // limpa depois que o submit dispara (não atrapalha o RD)
+            setTimeout(() => form.reset(), 1200);
+        }, false);
     })();
     </script>
+
 </body>
 </html>

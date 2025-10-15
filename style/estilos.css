@@ -390,7 +390,6 @@ h1,h2,h3,h4{ font-family: var(--font-heading); letter-spacing:.1px; }
 }
 
 #prova-social .ps-wrap{
-  max-width: 1400px;
   margin: 0 auto;
   text-align: center;
   padding: 20px 40px 20px;  
@@ -1332,15 +1331,6 @@ will-change: transform;
   border: 2px dashed #DDA326;
   transform: rotate(4deg);
   box-shadow: 0 6px 16px rgba(63,191,255,.18);
-}
-
-/* Responsivo fino */
-@media (max-width: 420px){
-  .ofx--play .ofx__btn{ width: 100%; }
-}
-
-@media (prefers-reduced-motion: reduce){
-  .ofx--play .ofx__btn{ transition: none; }
 }
 
 /* ===== Seção: FAQ ===== */
