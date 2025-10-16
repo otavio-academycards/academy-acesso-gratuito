@@ -1667,6 +1667,48 @@ will-change: transform;
   position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);
 }
 
+/* ===== WhatsApp CTA (drop-in, sem conflitos) ===== */
+.wa-cta {
+  padding: 48px 16px;
+  background: linear-gradient(180deg, #0f2d3a 0%, #091b24 100%);
+  color: #fff;
+  text-align: center;
+}
+.wa-cta .container { max-width: 1080px; margin: 0 auto; }
+.wa-cta h2 { margin: 0 0 8px; font-size: clamp(1.4rem, 2.6vw, 2rem); }
+.wa-cta p.lead { max-width: 720px; margin: 0 auto 20px; opacity: .9; }
+
+.wa-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 22px; border-radius: 999px;
+  background: #25d366; color: #062b18;
+  font-weight: 700; text-decoration: none;
+  box-shadow: 0 10px 24px rgba(37,211,102,.35);
+  transition: transform .12s ease, box-shadow .2s ease;
+}
+.wa-btn:hover { transform: translateY(-1px); box-shadow: 0 14px 28px rgba(37,211,102,.5); color: #fff;}
+.wa-btn:focus { outline: 3px solid rgba(37,211,102,.6); outline-offset: 2px; }
+.wa-btn img { width: 20px; height: 20px; }
+
+.wa-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+@media (min-width: 700px) { .wa-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.wa-card {
+  background: #fff; border: 1px solid rgba(0,0,0,.06);
+  border-radius: 16px; padding: 16px 18px;
+  box-shadow: 0 8px 18px rgba(0,0,0,.06);
+}
+.wa-card h3 { margin: 0 0 6px; font-size: 1.05rem; }
+.wa-card p { margin: 0; opacity: .85; }
+
+/* Dark mode amigável */
+@media (prefers-color-scheme: dark) {
+  .wa-cta { background: linear-gradient(180deg, #0d2330 0%, #09161d 100%); color: #e8fff4; }
+  .wa-card { background: #0f2430; border-color: rgba(255,255,255,.08); }
+  .wa-btn { color: #052214; }
+}
+
+
 /* ===== Footer ===== */
 section.footer-content {
   background-color: #0074AD;
